@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Лаба №2. Задание 1</title>
+		<meta charset = "utf-8">
+		<link rel = "stylesheet" href = "lib/style.css">
+		<script src = "lib/script.js"></script>
+	</head>
+
+	<body>
+		<table border = "2" id = "table">
+			<caption>Информация о машине и ее владельце</caption>
+			<thead>
+				<th onclick = "sortTable(0)">Ф.И.О. владельца</th>
+				<th onclick = "sortTable(1)">Номер</th>
+				<th onclick = "sortTable(2)">Марка</th>
+				<th onclick = "sortTable(3)">Модель</th>
+			</thead>
+			<tbody id="tbody">	
+			<tr>
+				<td>Иванов М. П.</td>
+				<td>A001AA</td>
+				<td>Subaru</td>
+				<td>Legacy</td>
+				<td><button onclick="deleteRow()">Удалить строку</button></td>
+				
+			</tr>
+			<tr>
+				<td>Петров А. С.</td>
+				<td>P999MH</td>
+				<td>Mitsubishi</td>
+				<td>Lancer</td>
+				<td><button onclick="deleteRow()">Удалить строку</button></td>
+			</tr>
+			<tr>
+				<td>Захаров В. Д.</td>
+				<td>H125BC</td>
+				<td>Toyota</td>
+				<td>Camry</td>
+				<td><button onclick="deleteRow()">Удалить строку</button></td>
+			</tr>
+			<tr>
+				<td>Марков К. В.</td>
+				<td>T532XH</td>
+				<td>Ford</td>
+				<td>Raptor</td>
+				<td><button onclick="deleteRow()">Удалить строку</button></td>
+			</tr>
+			</tbody>
+		</table>
+
+		<form id = "form">
+			<p><b>Добавьте информацию в таблицу:</b></p>
+			<p>Ф.И.О. владельца:<br>
+			<input  size = "40" id = "inputOwner">
+			</p>
+			<p>Номер:<br>
+			<input size = "40" id = "inputNum">
+			</p>
+			<p>Марка:<br>
+			<input size = "40" id = "inputMark">
+			</p>
+			<p>Модель:<br>
+			<input size = "40" id = "inputModel">
+			</p>
+
+			<p><input type = "submit" onclick = "addRow()"></p>
+		</form>
+	</body>
+</html>
